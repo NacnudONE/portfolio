@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Denys</title>
+    <meta name="description" content="Developer portfolio: projects, skills, contacts.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="main-nav__logo" href="#hero">Denys</a>
+            <button class="main-nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav-list">
+                <span class="main-nav__toggle-bar"></span>
+                <span class="main-nav__toggle-bar"></span>
+                <span class="main-nav__toggle-bar"></span>
+            </button>
+            <ul id="main-nav-list" class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link" href="#hero">Home</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#projects">Projects</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#skills">Skills</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#contacts">Contacts</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html">UA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="bento-grid">
+
+        <section id="hero" class="bento-card bento-card--hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading" class="hero__name">Junior Frontend Developer</h1>
+            <p class="hero__text">Junior Frontend Developer passionate about building clean and functional interfaces. I work with React, TypeScript and Next.js, and have experience developing Chrome extensions (Manifest V3) and writing tests (Vitest, Testing Library).</p>
+            <p class="hero__text">I love digging into details — from component architecture to small UX touches. Among my projects: WebCalendar (a calendar app with support for recurring events), Doodle Jump (a Canvas API game), and PoE Gem Overlay (a utility for Path of Exile).</p>
+            <p class="hero__text">When I'm not writing code, I'm reading, playing video games, or experimenting in the kitchen.</p>
+        </section>
+
+        <section id="projects" class="bento-card bento-card--projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading" class="bento-card__title">Projects</h2>
+
+            <div class="projects-grid">
+                <article class="project-card" data-project="1">
+                    <div class="project-card__preview has-thumb" role="button" tabindex="0" aria-label="View screenshots of the WebCalendar project" data-gallery='["screan shot/webcalendar/login.png", "screan shot/webcalendar/day-view.png", "screan shot/webcalendar/create-event.png"]' style="background-image: url('screan shot/webcalendar/login.png');"></div>
+                    <h3 class="project-card__title">WebCalendar</h3>
+                    <p class="project-card__desc">A desktop and web app for managing events and calendars: Google sign-in, day/week/month views, and an Electron version for Windows.</p>
+                    <ul class="project-card__tags">
+                        <li class="project-card__tag">React</li>
+                        <li class="project-card__tag">TypeScript</li>
+                        <li class="project-card__tag">Firebase</li>
+                    </ul>
+                    <a class="project-card__link" href="https://github.com/NacnudONE/-web-calendar" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+                </article>
+
+                <article class="project-card" data-project="2">
+                    <div class="project-card__preview has-thumb" role="button" tabindex="0" aria-label="View screenshots of the Doodle Jump project" data-gallery='["screan shot/doodle-jump/menu.png", "screan shot/doodle-jump/gameplay.png"]' style="background-image: url('screan shot/doodle-jump/gameplay.png');"></div>
+                    <h3 class="project-card__title">Doodle Jump</h3>
+                    <p class="project-card__desc">A browser take on the classic arcade game: the character auto-jumps across platforms (normal, moving, breakable), rendered directly via the Canvas API with no game engine.</p>
+                    <ul class="project-card__tags">
+                        <li class="project-card__tag">React</li>
+                        <li class="project-card__tag">TypeScript</li>
+                        <li class="project-card__tag">Canvas API</li>
+                    </ul>
+                    <div class="project-card__actions">
+                        <button class="project-card__play" type="button" data-play-url="https://nacnudone.github.io/doodle-Jump/">▶ Play</button>
+                        <a class="project-card__link" href="https://github.com/NacnudONE/doodle-Jump" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-project="3">
+                    <div class="project-card__preview project-card__preview--logo" aria-hidden="true">
+                        <span class="poe-logo">
+                            <span class="poe-logo__gem">◆</span>
+                            <span class="poe-logo__text">Path<br>of<br>Exile</span>
+                        </span>
+                    </div>
+                    <h3 class="project-card__title">PoE Gem Overlay</h3>
+                    <p class="project-card__desc">An overlay for Path of Exile that recognizes the Transfigured Gem under the cursor via OCR and shows its price from the PoE Trade API in real time — click-through and non-intrusive to gameplay.</p>
+                    <ul class="project-card__tags">
+                        <li class="project-card__tag">Python</li>
+                        <li class="project-card__tag">OCR</li>
+                        <li class="project-card__tag">Trade API</li>
+                    </ul>
+                    <a class="project-card__link" href="https://github.com/NacnudONE/poe_gem_overlay" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="bento-card bento-card--skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" class="bento-card__title">Skills</h2>
+            <ul class="skills-list">
+                <li class="skills-list__item">React</li>
+                <li class="skills-list__item">TypeScript</li>
+                <li class="skills-list__item">Next.js</li>
+                <li class="skills-list__item">Chrome Extensions (Manifest V3)</li>
+                <li class="skills-list__item">Vitest</li>
+                <li class="skills-list__item">Testing Library</li>
+            </ul>
+        </section>
+
+        <section id="contacts" class="bento-card bento-card--contacts" aria-labelledby="contacts-heading">
+            <h2 id="contacts-heading" class="bento-card__title">Contacts</h2>
+            <ul class="contacts-list">
+                <li class="contacts-list__item">
+                    <a class="contacts-list__link" href="mailto:kobilasnijdenis@gmail.com" aria-label="Send an email">kobilasnijdenis@gmail.com</a>
+                </li>
+                <li class="contacts-list__item">
+                    <a class="contacts-list__link" href="https://github.com/NacnudONE" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
+                </li>
+                <li class="contacts-list__item">
+                    <a class="contacts-list__link" href="https://www.linkedin.com/in/%D0%B4%D0%B5%D0%BD%D0%B8%D1%81-%D0%BA%D0%BE%D0%B1%D0%B8%D0%BB%D1%8F%D1%88%D0%BD%D0%B8%D0%B9-59717441b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+                </li>
+            </ul>
+            <div class="contacts-cv-group">
+                <a class="contacts-cv" href="files/Denys_Kobyliashnyi_Resume.docx" download>⬇ CV (UA)</a>
+                <a class="contacts-cv" href="files/Denys_Kobyliashnyi_Resume_EN.docx" download>⬇ CV (EN)</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p class="site-footer__text">&copy; 2026 Your Name. All rights reserved.</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox" hidden>
+        <div class="lightbox__backdrop" data-lightbox-close></div>
+        <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Project screenshots preview" tabindex="-1">
+            <div class="lightbox__frame">
+                <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous screenshot">&larr;</button>
+                <div class="lightbox__stage"></div>
+                <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next screenshot">&rarr;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="play-modal" id="play-modal" hidden>
+        <div class="play-modal__backdrop" data-play-close></div>
+        <div class="play-modal__dialog" role="dialog" aria-modal="true" aria-label="Game" tabindex="-1">
+            <button class="play-modal__close" type="button" aria-label="Close" data-play-close>&times;</button>
+            <div class="play-modal__frame">
+                <iframe class="play-modal__iframe" title="Game" allow="autoplay; fullscreen"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
