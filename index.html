@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо — Денис</title>
+    <meta name="description" content="Портфоліо розробника: проєкти, скіли, контакти.">
+
+    <!-- Етап 2: сюди буде наповнено CSS Grid верстку -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Перейти до основного контенту</a>
+
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Основна навігація">
+            <a class="main-nav__logo" href="#hero">Денис</a>
+            <button class="main-nav__toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="main-nav-list">
+                <span class="main-nav__toggle-bar"></span>
+                <span class="main-nav__toggle-bar"></span>
+                <span class="main-nav__toggle-bar"></span>
+            </button>
+            <ul id="main-nav-list" class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link" href="#hero">Головна</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#projects">Проєкти</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#skills">Скіли</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="bento-grid">
+
+        <!-- Hero-картка: велика, займає найбільше місця в сітці -->
+        <section id="hero" class="bento-card bento-card--hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading" class="hero__name">Junior Frontend Developer</h1>
+            <p class="hero__text">Junior Frontend Developer, який захоплюється створенням чистих та функціональних інтерфейсів. Працюю з React, TypeScript та Next.js, маю досвід розробки Chrome-розширень (Manifest V3) та написання тестів (Vitest, Testing Library).</p>
+            <p class="hero__text">Люблю розбиратись у деталях — від архітектури компонентів до дрібниць у UX. Серед моїх проєктів: WebCalendar (застосунок-календар з підтримкою повторюваних подій), Doodle Jump (гра на Canvas API) та PoE Gem Overlay (утиліта для Path of Exile).</p>
+            <p class="hero__text">Коли не пишу код — читаю, граю у відеоігри або експериментую на кухні.</p>
+        </section>
+
+        <!-- Секція "Проєкти" як bento-картка-контейнер з підсіткою на 4 плейсхолдери -->
+        <section id="projects" class="bento-card bento-card--projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading" class="bento-card__title">Проєкти</h2>
+
+            <div class="projects-grid">
+                <article class="project-card" data-project="1">
+                    <div class="project-card__preview has-thumb" role="button" tabindex="0" aria-label="Переглянути скріншоти проєкту WebCalendar" data-gallery='["screan shot/webcalendar/login.png", "screan shot/webcalendar/day-view.png", "screan shot/webcalendar/create-event.png"]' style="background-image: url('screan shot/webcalendar/login.png');"></div>
+                    <h3 class="project-card__title">WebCalendar</h3>
+                    <p class="project-card__desc">Десктопний і веб-застосунок для керування подіями та календарями: авторизація через Google, перегляд по днях/тижнях/місяцях, Electron-версія для Windows.</p>
+                    <ul class="project-card__tags">
+                        <li class="project-card__tag">React</li>
+                        <li class="project-card__tag">TypeScript</li>
+                        <li class="project-card__tag">Firebase</li>
+                    </ul>
+                    <a class="project-card__link" href="https://github.com/NacnudONE/-web-calendar" target="_blank" rel="noopener noreferrer">Переглянути на GitHub →</a>
+                </article>
+
+                <article class="project-card" data-project="2">
+                    <div class="project-card__preview has-thumb" role="button" tabindex="0" aria-label="Переглянути скріншоти проєкту Doodle Jump" data-gallery='["screan shot/doodle-jump/menu.png", "screan shot/doodle-jump/gameplay.png"]' style="background-image: url('screan shot/doodle-jump/gameplay.png');"></div>
+                    <h3 class="project-card__title">Doodle Jump</h3>
+                    <p class="project-card__desc">Браузерна реалізація класичної аркадної гри: персонаж автоматично стрибає по платформах (звичайних, рухомих, крихких), гра рендериться напряму через Canvas API без ігрових рушіїв.</p>
+                    <ul class="project-card__tags">
+                        <li class="project-card__tag">React</li>
+                        <li class="project-card__tag">TypeScript</li>
+                        <li class="project-card__tag">Canvas API</li>
+                    </ul>
+                    <div class="project-card__actions">
+                        <button class="project-card__play" type="button" data-play-url="https://nacnudone.github.io/doodle-Jump/">▶ Play</button>
+                        <a class="project-card__link" href="https://github.com/NacnudONE/doodle-Jump" target="_blank" rel="noopener noreferrer">Переглянути на GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-project="3">
+                    <div class="project-card__preview project-card__preview--logo" aria-hidden="true">
+                        <span class="poe-logo">
+                            <span class="poe-logo__gem">◆</span>
+                            <span class="poe-logo__text">Path<br>of<br>Exile</span>
+                        </span>
+                    </div>
+                    <h3 class="project-card__title">PoE Gem Overlay</h3>
+                    <p class="project-card__desc">Overlay для Path of Exile, що розпізнає Transfigured Gem під курсором через OCR і показує ціну з PoE Trade API в реальному часі, click-through, не заважає грі.</p>
+                    <ul class="project-card__tags">
+                        <li class="project-card__tag">Python</li>
+                        <li class="project-card__tag">OCR</li>
+                        <li class="project-card__tag">Trade API</li>
+                    </ul>
+                    <a class="project-card__link" href="https://github.com/NacnudONE/poe_gem_overlay" target="_blank" rel="noopener noreferrer">Переглянути на GitHub →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Картка "Скіли" -->
+        <section id="skills" class="bento-card bento-card--skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" class="bento-card__title">Скіли</h2>
+            <ul class="skills-list">
+                <li class="skills-list__item">React</li>
+                <li class="skills-list__item">TypeScript</li>
+                <li class="skills-list__item">Next.js</li>
+                <li class="skills-list__item">Chrome Extensions (Manifest V3)</li>
+                <li class="skills-list__item">Vitest</li>
+                <li class="skills-list__item">Testing Library</li>
+            </ul>
+        </section>
+
+        <!-- Картка "Контакти" -->
+        <section id="contacts" class="bento-card bento-card--contacts" aria-labelledby="contacts-heading">
+            <h2 id="contacts-heading" class="bento-card__title">Контакти</h2>
+            <ul class="contacts-list">
+                <li class="contacts-list__item">
+                    <a class="contacts-list__link" href="mailto:kobilasnijdenis@gmail.com" aria-label="Написати на пошту">kobilasnijdenis@gmail.com</a>
+                </li>
+                <li class="contacts-list__item">
+                    <a class="contacts-list__link" href="https://github.com/NacnudONE" target="_blank" rel="noopener noreferrer" aria-label="Профіль на GitHub">GitHub</a>
+                </li>
+                <li class="contacts-list__item">
+                    <a class="contacts-list__link" href="https://www.linkedin.com/in/%D0%B4%D0%B5%D0%BD%D0%B8%D1%81-%D0%BA%D0%BE%D0%B1%D0%B8%D0%BB%D1%8F%D1%88%D0%BD%D0%B8%D0%B9-59717441b/" target="_blank" rel="noopener noreferrer" aria-label="Профіль на LinkedIn">LinkedIn</a>
+                </li>
+            </ul>
+            <div class="contacts-cv-group">
+                <a class="contacts-cv" href="files/Denys_Kobyliashnyi_Resume.docx" download>⬇ CV (UA)</a>
+                <a class="contacts-cv" href="files/Denys_Kobyliashnyi_Resume_EN.docx" download>⬇ CV (EN)</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p class="site-footer__text">&copy; 2026 Ваше ім'я. Усі права захищено.</p>
+    </footer>
+
+    <!-- Крок: галерея/lightbox для скріншотів проєктів (одна спільна модалка) -->
+    <div class="lightbox" id="lightbox" hidden>
+        <div class="lightbox__backdrop" data-lightbox-close></div>
+        <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Перегляд скріншотів проєкту" tabindex="-1">
+            <div class="lightbox__frame">
+                <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Попередній скріншот">&larr;</button>
+                <div class="lightbox__stage"></div>
+                <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Наступний скріншот">&rarr;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Крок: модалка для запуску гри в iframe без переходу на іншу сторінку -->
+    <div class="play-modal" id="play-modal" hidden>
+        <div class="play-modal__backdrop" data-play-close></div>
+        <div class="play-modal__dialog" role="dialog" aria-modal="true" aria-label="Гра" tabindex="-1">
+            <button class="play-modal__close" type="button" aria-label="Закрити" data-play-close>&times;</button>
+            <div class="play-modal__frame">
+                <iframe class="play-modal__iframe" title="Гра" allow="autoplay; fullscreen"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
